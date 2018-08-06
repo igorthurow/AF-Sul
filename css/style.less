@@ -1,0 +1,160 @@
+@medium-padding-top: 50px;
+@default-bigger-text: 3rem;
+@default-medium-text: 1.5rem;
+.default-bigger-text {
+    font-size: 3rem;
+    @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.default-medium-text {
+    font-size: 1.5rem;
+    @media screen and (max-width: 576px) {
+        font-size: 1rem;
+    }
+}
+
+.carousel-main-padding {
+    @media screen and (min-width: 1024px) {
+        padding-bottom: 15%;
+    }
+    @media screen and (max-width: 768px) {
+        padding-bottom: 30%;
+    }
+    @media screen and (max-width: 576px) {
+        padding-bottom: 50%;
+    }
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .carousel-content-text {
+        .carousel-main-padding;
+        background-color: rgba(0, 0, 0, .6);
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        .carousel-content-text-main {
+            text-align: center;
+            text-shadow: .3px .3px .3px rgba(0, 0, 0, 1);
+            font-weight: bold;
+            color: #fff;
+            .default-bigger-text;
+        }
+        .carousel-content-text-side {
+            text-align: center;
+            text-shadow: .3px .3px .3px rgba(0, 0, 0, 1);
+            color: #fff;
+            .default-medium-text
+        }
+        .carousel-main-btn {
+            position: absolute;
+            bottom: 30%;
+            border: 3px solid #f8f9fa;
+        }
+    }
+}
+
+.is-not-mobo {
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
+}
+
+.navbar {
+    background-color: #000 !important;
+    border-bottom: 4px solid #D6B10B;
+    .nav-item {
+        @media screen and (min-width: 1024px) {
+            .nav-link {
+                font-size: 14px;
+                text-transform: uppercase;
+                display: flex;
+                &:after {
+                    content: '';
+                    padding-left: 13px;
+                    border-right: 1px solid grey;
+                }
+                &.nav-link-last-child {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-us {
+    margin-top: @medium-padding-top;
+    .about-us-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .about-us-unique-title {
+            font-weight: bold;
+        }
+        .about-us-main-text {
+            display: flex;
+            justify-content: space-between;
+            padding-top: @medium-padding-top;
+            .about-us-main-text-left {
+                font-weight: lighter;
+                @media screen and (min-width: 768px) {
+                    text-align: right;
+                }
+                flex-basis: 49%;
+                .default-bigger-text;
+                line-height: 1;
+            }
+            .about-us-main-text-right {
+                font-size: 15px;
+                flex-basis: 49%;
+            }
+        }
+    }
+    .about-us-btn {
+        margin-top: @medium-padding-top;
+    }
+}
+
+.our-contacts {
+    margin-top: @medium-padding-top;
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    background-color: #D99C06;
+    .our-contacts-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .our-contacts-number-prefix {
+            .default-medium-text
+        }
+        .our-contacts-number-item {
+            white-space: nowrap;
+            .default-bigger-text;
+            padding: 0 10px;
+        }
+    }
+    .our-contacts-email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .default-medium-text
+    }
+}
