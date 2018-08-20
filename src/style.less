@@ -35,7 +35,7 @@
 }
 
 .default-small-text {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .carousel-main-padding {
@@ -43,10 +43,10 @@
     padding-bottom: 15%;
   }
   @media screen and (max-width: 768px) {
-    padding-bottom: 30%;
+    padding-bottom: 20%;
   }
   @media screen and (max-width: 576px) {
-    padding-bottom: 35%;
+    padding-bottom: 0;
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -74,24 +74,32 @@ body {
       justify-content: center;
       height: 100%;
       flex-direction: column;
-      .carousel-content-text-main {
-        text-align: center;
-        text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
-        font-weight: bold;
-        color: #fff;
-        .default-bigger-text;
-      }
-      .carousel-content-text-side {
-        text-align: center;
-        text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
-        color: #fff;
-        .default-medium-text;
+      .carousel-content-text-wrapper {
+        margin: 50px 0;
+        @supports (-webkit-overflow-scrolling: touch) {
+          margin-top: 70px;
+        }
+        .carousel-content-text-main {
+          text-align: center;
+          text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
+          font-weight: bold;
+          color: #fff;
+          .default-bigger-text;
+        }
+        .carousel-content-text-side {
+          text-align: center;
+          text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
+          color: #fff;
+          .default-medium-text;
+        }
       }
       .carousel-main-btn {
-				.default-small-text;
-        position: absolute;
-        bottom: 30%;
+        .default-small-text;
         border: 3px solid #f8f9fa;
+        @media screen and (min-width: 576px) {
+          position: absolute;
+          bottom: 35%;
+        }
       }
     }
   }
@@ -158,10 +166,10 @@ body {
           }
         }
       }
-		}
-		&.navbar-item-page {
-			position: sticky;
-		}
+    }
+    &.navbar-item-page {
+      position: sticky;
+    }
   }
   .about-us {
     padding: @medium-padding 0;
@@ -185,9 +193,11 @@ body {
           align-items: center;
           .about-us-main-text-left {
             font-weight: lighter;
-            flex-basis: 49%;
             .default-bigger-text;
             padding-bottom: @small-padding;
+            @media screen and (min-width: 768px) {
+              line-height: 1.8;
+            }
             p {
               margin-bottom: 0.3rem;
             }
@@ -198,7 +208,6 @@ body {
           }
           .about-us-main-text-right {
             font-size: 16px;
-            flex-basis: 49%;
             line-height: 1.8;
           }
         }
