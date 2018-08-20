@@ -895,6 +895,7 @@ pre code {
     max-width: 91.666667%;
   }
   .col-sm-12 {
+    -webkit-flex: 0 0 8.333333%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
