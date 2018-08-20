@@ -1,2 +1,2 @@
 # AFSul
-Projeto landing page AFSul Máquinas:
+Projeto landing page AFSul Máquinas
