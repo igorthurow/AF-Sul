@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 gulp.task('image', function () {
   gulp.src('./src/resources/*')
     .pipe(image())
-    .pipe(gulp.dest('./app/resources'));
+    .pipe(gulp.dest('./app/resources'))
 });
 
 gulp.task('watch', function() {
