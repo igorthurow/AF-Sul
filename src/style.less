@@ -1,14 +1,25 @@
 @nice-yellow: #d6b10b;
 @medium-padding: 50px;
 @small-padding: 20px;
+.btn {
+  padding: 10px 20px;
+}
+
+.default-item-text {
+  font-size: 1.4rem;
+}
+
 .email {
   text-align: center;
   word-break: break-all;
   font-size: 1.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 }
 
 .default-bigger-text {
-  font-size: 3rem;
+  font-size: 2.8rem;
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
   }
@@ -18,12 +29,10 @@
 }
 
 .default-title {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
   @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -35,7 +44,10 @@
 }
 
 .default-small-text {
-  font-size: 1.3rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+  font-size: 1rem;
 }
 
 .carousel-main-padding {
@@ -66,7 +78,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     .carousel-content-text {
-      .carousel-main-padding;
       background-color: rgba(0, 0, 0, 0.6);
       font-size: 3rem;
       display: flex;
@@ -98,7 +109,7 @@ body {
         border: 3px solid #f8f9fa;
         @media screen and (min-width: 576px) {
           position: absolute;
-          bottom: 35%;
+          bottom: 30%;
         }
       }
     }
@@ -179,7 +190,13 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      h2 {
+        .default-title;
+        font-size: 2.1rem;
+        font-weight: normal;
+      }
       .about-us-unique-title {
+        line-height: 0.5;
         font-weight: bold;
         .default-title;
         @media screen and (max-width: 576px) {
@@ -196,7 +213,7 @@ body {
             .default-bigger-text;
             padding-bottom: @small-padding;
             @media screen and (min-width: 768px) {
-              line-height: 1.8;
+              line-height: 1.9;
             }
             p {
               margin-bottom: 0.3rem;
@@ -232,7 +249,12 @@ body {
         .default-medium-text;
       }
       .our-contacts-number-item {
-        font-weight: bold;
+        @media screen and (min-width: 768px) {
+          cursor: default;
+          pointer-events: none;
+        }
+        text-decoration: none;
+        color: #000;
         white-space: nowrap;
         .default-bigger-text;
         padding: 0 10px;
@@ -243,94 +265,115 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: bold;
+      font-weight: 600;
+      white-space: nowrap;
     }
   }
   .our-products {
-    padding: @medium-padding;
+    padding: @medium-padding 0;
+    @media screen and (min-width: 768px) {
+      padding: @medium-padding;
+    }
     .our-products-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .our-products-logo {
-        max-width: 245px;
-      }
-      .our-products-title {
+      .our-products-side-title {
+        white-space: nowrap;
         text-align: center;
-        .default-title;
-      }
-      .row {
-        align-items: center;
-        justify-content: center;
-        .our-products-item {
-          padding: 10% 3%;
-          @media screen and (min-width: 768px) {
-            padding: 4%;
-          }
-          .our-products-img-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @media screen and (min-width: 768px) {
-              min-height: 300px;
-            }
-            .our-products-image {
-              max-width: 100%;
-              max-height: 400px;
-            }
-          }
+        font-size: 1.6rem;
+        line-height: .6;
+        font-weight: normal;
+        @media screen and (min-width: 768px) {
+          font-size: 2rem;
+          line-height: 1.2;
         }
-        .our-products-item-title {
-          .default-small-text;
-          font-weight: bold;
-          @media screen and (min-width: 768px) {
-            margin-top: 10px;
-          }
-        }
-      }
-      .our-products-partners {
-        padding-top: @medium-padding;
-      }
-      button {
-        .default-small-text;
-        margin: 20px 0;
       }
     }
   }
-  .contact-us {
-    padding: @medium-padding 0;
-    background-color: #181818;
-    .contact-us-content {
-      color: #fff;
-      .contact-us-logo-row {
-        @media screen and (max-width: 576px) {
-          display: flex;
-          justify-content: center;
-          .contact-us-logo-image {
-            max-height: 140px;
-          }
-        }
+  .our-products-logo {
+    max-width: 245px;
+  }
+  .our-products-title {
+    @media screen and (min-width: 768px) {
+      line-height: 0.6;
+    }
+    text-align: center;
+    .default-title;
+  }
+  .row {
+    align-items: center;
+    justify-content: center;
+    .our-products-item {
+      padding: 10% 3%;
+      @media screen and (min-width: 768px) {
+        padding: 4%;
       }
-      .contact-us-title {
-        .default-title;
-      }
-      .row {
+      .our-products-img-wrapper {
+        display: flex;
+        justify-content: center;
         align-items: center;
-        padding-top: @medium-padding;
-        @media screen and (max-width: 576px) {
-          flex-wrap: wrap-reverse;
+        @media screen and (min-width: 768px) {
+          min-height: 300px;
         }
-        .contact-us-contacts {
-          text-align: center;
-          padding-bottom: @medium-padding;
-          @media screen and (min-width: 769px) {
-            padding-top: 0;
-            text-align: right;
+        .our-products-image {
+          max-width: 100%;
+          max-height: 400px;
+          @media screen and (max-width: 768px) {
+            padding: 0 10%;
           }
-          .email {
-            @media screen and (min-width: 768px) {
-              text-align: right;
-            }
+        }
+      }
+    }
+    .our-products-item-title {
+      .default-item-text;
+      @media screen and (min-width: 768px) {
+        margin-top: 10px;
+      }
+    }
+  }
+  .our-products-partners {
+    padding-top: @medium-padding;
+  }
+  button {
+    .default-small-text;
+    margin: 20px 0;
+  }
+}
+
+.contact-us {
+  padding: @medium-padding 0;
+  background-color: #181818;
+  .contact-us-content {
+    color: #fff;
+    .contact-us-logo-row {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        justify-content: center;
+        .contact-us-logo-image {
+          max-height: 140px;
+        }
+      }
+    }
+    .contact-us-title {
+      .default-title;
+    }
+    .row {
+      align-items: center;
+      padding-top: @medium-padding;
+      @media screen and (max-width: 576px) {
+        flex-wrap: wrap-reverse;
+      }
+      .contact-us-contacts {
+        text-align: center;
+        padding-bottom: @medium-padding;
+        @media screen and (min-width: 769px) {
+          padding-top: 0;
+          text-align: right;
+        }
+        .email {
+          @media screen and (min-width: 768px) {
+            text-align: right;
           }
         }
       }
