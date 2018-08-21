@@ -10,6 +10,8 @@
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="style.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script src="js.min.js"></script>
 </head>
 
 <body>
@@ -31,13 +33,13 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Quem somos</a>
+						<a class="nav-link" href="#about-us-content">Quem somos</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Orçamentos</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						<a class="nav-link dropdown-toggle" href="#0" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 						    aria-expanded="false">
 							Produtos
 						</a>
@@ -74,6 +76,9 @@
 				<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
 				<li data-target="#carouselIndicators" data-slide-to="1"></li>
 				<li data-target="#carouselIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselIndicators" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner" role="listbox">
 				<!-- Slide One - Set the background image for this slide in the line below -->
@@ -83,7 +88,9 @@
 							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
 							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
 						</span>
-						<button type="button" class="btn btn-outline-light carousel-main-btn">Saiba mais</button>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
 					</div>
 				</div>
 				<!-- Slide Two - Set the background image for this slide in the line below -->
@@ -93,7 +100,9 @@
 							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
 							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
 						</span>
-						<button type="button" class="btn btn-outline-light carousel-main-btn">Saiba mais</button>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
 					</div>
 				</div>
 				<!-- Slide Three - Set the background image for this slide in the line below -->
@@ -103,7 +112,45 @@
 							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
 							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
 						</span>
-						<button type="button" class="btn btn-outline-light carousel-main-btn">Saiba mais</button>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
+					</div>
+				</div>
+				<!-- Slide Three - Set the background image for this slide in the line below -->
+				<div class="carousel-item" style="background-image: url('./resources/leeboy.jpg')">
+					<div class="carousel-content-text">
+						<span class="carousel-content-text-wrapper">
+							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
+							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
+						</span>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
+					</div>
+				</div>
+				<!-- Slide Three - Set the background image for this slide in the line below -->
+				<div class="carousel-item" style="background-image: url('./resources/leeboy.jpg')">
+					<div class="carousel-content-text">
+						<span class="carousel-content-text-wrapper">
+							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
+							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
+						</span>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
+					</div>
+				</div>
+				<!-- Slide Three - Set the background image for this slide in the line below -->
+				<div class="carousel-item" style="background-image: url('./resources/leeboy.jpg')">
+					<div class="carousel-content-text">
+						<span class="carousel-content-text-wrapper">
+							<h2 class="carousel-content-text-main">Equipamentos & Peças</h2>
+							<h3 class="carousel-content-text-side">Comercialização de Máquinas e Peças para Pavimentação e Britagem</h3>
+						</span>
+						<button type="button" class="btn btn-outline-light carousel-main-btn">
+							<a href="#our-products-content">Saiba mais</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -120,7 +167,7 @@
 
 	<!-- Page Content -->
 	<section class="about-us container-fluid">
-		<div class="container about-us-content">
+		<div id="about-us-content" class="container about-us-content">
 			<h2>Saiba mais sobre a</h2>
 			<h1 class="about-us-unique-title">AF Sul - Máquinas</h1>
 			<span class="about-us-main-text">
@@ -172,51 +219,70 @@
 	</section>
 	<!-- Products Section -->
 	<section class="our-products container-fluid">
-		<div class="container our-products-content">
+		<div id="our-products-content" class="container our-products-content">
 			<h2 class="our-products-side-title">Conheça os produtos</h2>
 			<h2 class="our-products-title">AF Sul - Máquinas
 			</h2>
 			<div class="row">
 				<div class="col-lg-4 col-md-4 text-center our-products-item">
 					<div class="our-products-img-wrapper">
-						<img src="./resources/britadores de mandibula.jpg" alt="Alimentador Vibratório" class="our-products-image">
+						<img src="./resources/vibro leeboy 8510b.PNG" alt="Alimentador Vibratório" class="our-products-image">
 					</div>
-					<h2 class="our-products-item-title">Britadores de Mandíbulas</h2>
+					<h2 class="our-products-item-title">Vibro Acabadoras de Asfalto</h2>
 				</div>
 				<div class="col-lg-4 col-md-4 text-center our-products-item">
 					<div class="our-products-img-wrapper">
-						<img src="./resources/britador conico.jpg" alt="Alimentador Vibratório" class="our-products-image">
+						<img src="./resources/britadores de mandibula.jpg" alt="Alimentador Vibratório our-products-image" class="our-products-image">
 					</div>
-					<h2 class="our-products-item-title">Britadores Cônicos</h2>
+					<h2 class="our-products-item-title">Britadores de Mandíbula</h2>
 				</div>
 				<div class="col-lg-4 col-md-4 text-center our-products-item">
 					<div class="our-products-img-wrapper">
 						<img src="./resources/britador de impacto VSI.jpg" alt="Alimentador Vibratório" class="our-products-image">
 					</div>
-					<h2 class="our-products-item-title">Britadores de Impacto VSI</h2>
+					<h2 class="our-products-item-title">Britadores de Impacto V.S.I</h2>
+				</div>
+				<div class="col-lg-4 col-md-4 text-center our-products-item">
+					<div class="our-products-img-wrapper">
+						<img src="./resources/asphalt-plant-ticel.jpg" alt="Alimentador Vibratório" class="our-products-image">
+					</div>
+					<h2 class="our-products-item-title">Usinas de Asfalto</h2>
+				</div>
+				<div class="col-lg-4 col-md-4 text-center our-products-item">
+					<div class="our-products-img-wrapper">
+						<img src="./resources/SR Itens Espargidor hidrostatico (SR EH).jpg" alt="Alimentador Vibratório" class="our-products-image">
+					</div>
+					<h2 class="our-products-item-title">Espargidores Hidrostáticos</h2>
 				</div>
 				<!-- Final da linha -->
 				<div class="col-lg-4 col-md-4 text-center our-products-item">
 					<div class="our-products-img-wrapper">
-						<img src="./resources/peneira vibratoria.jpg" alt="Alimentador Vibratório" class="our-products-image">
+						<img src="./resources/SR Itens Dump - Caçamba de descarreganebti hiruzibtak 40t (SR DUMP DH).jpg" alt="Alimentador Vibratório"
+						    class="our-products-image">
 					</div>
-					<h2 class="our-products-item-title">Peneiras Vibratórias</h2>
-				</div>
-				<div class="col-lg-4 col-md-4 text-center our-products-item">
-					<div class="our-products-img-wrapper">
-						<img src="./resources/alimentador vibratório.jpg" alt="Alimentador Vibratório our-products-image" class="our-products-image">
-					</div>
-					<h2 class="our-products-item-title">Alimentadores Vibratórios</h2>
-				</div>
-				<div class="col-lg-4 col-md-4 text-center our-products-item">
-					<div class="our-products-img-wrapper">
-						<img src="./resources/pecas para britadoras.jpg" alt="Alimentador Vibratório" class="our-products-image">
-					</div>
-					<h2 class="our-products-item-title">Peças para Britadores</h2>
+					<h2 class="our-products-item-title">DUMP – Descarregamento Horizontal</h2>
 				</div>
 			</div>
 			<button type="button" class="btn btn-dark">Confira todos produtos</button>
-			<!--<img src="./resources/logo-parceiros.jpg" alt="Logo de parceiros" class="our-products-partners">-->
+			<div class="container">
+				<div class="our-products-partners">
+					<div class="our-products-image-wrapper">
+						<img class="img-fluid" src="./resources/logo_leeboy_ticel.jpg" alt="Logo Leeboy/Ticel">
+					</div>
+					<div class="our-products-image-wrapper">
+						<img class="img-fluid" src="./resources/logo_sr.jpg" alt="Logo SR Equipamentos">
+					</div>
+					<div class="our-products-image-wrapper">
+						<img class="img-fluid" src="./resources/logo_açotelas.jpg" alt="Logo Aço Telas">
+					</div>
+					<div class="our-products-image-wrapper">
+						<img class="img-fluid" src="./resources/logo_terrativa.jpg" alt="Logo Terrativa">
+					</div>
+					<div class="our-products-image-wrapper">
+						<img class="img-fluid" src="./resources/logo_furlan.jpg" alt="Logo Furlan">
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- contact us -->
