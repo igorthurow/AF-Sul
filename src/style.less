@@ -6,7 +6,10 @@
 }
 
 .default-item-text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .email {
@@ -111,6 +114,18 @@ body {
           position: absolute;
           bottom: 30%;
         }
+        a {
+          text-decoration: none;
+          color: #f8f9fa;
+          &:hover {
+            color: #212529;
+          }
+        }
+        &:hover, &:active {
+          a {
+            color: #212529;
+          }
+        }
       }
     }
   }
@@ -145,7 +160,7 @@ body {
               &:after {
                 content: "";
                 border-right: 1px solid grey;
-                padding-left: 13px;
+                padding-left: 16px;
               }
             }
             &.nav-link-last-child {
@@ -156,7 +171,7 @@ body {
               &:before {
                 content: " ";
                 border-left: 1px solid grey;
-                padding-left: 13px;
+                padding-left: 16px;
               }
             }
           }
@@ -282,7 +297,7 @@ body {
         white-space: nowrap;
         text-align: center;
         font-size: 1.6rem;
-        line-height: .6;
+        line-height: 0.6;
         font-weight: normal;
         @media screen and (min-width: 768px) {
           font-size: 2rem;
@@ -327,13 +342,33 @@ body {
     }
     .our-products-item-title {
       .default-item-text;
-      @media screen and (min-width: 768px) {
-        margin-top: 10px;
-      }
+      margin-top: 10px;
     }
   }
   .our-products-partners {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
     padding-top: @medium-padding;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+      justify-content: space-around;
+      margin: 0;
+    }
+    .our-products-image-wrapper {
+      max-width: 100px;
+      margin: 15px;
+      @media screen and (min-width: 768px) {
+        max-width: 130px;
+      }
+      transition: 0.25s;
+      /* Safari 6.0 - 9.0 */
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
   button {
     .default-small-text;
@@ -378,5 +413,10 @@ body {
         }
       }
     }
+  }
+}
+.leeboy-furlan {
+  .our-products-img-wrapper {
+    min-height: 400px !important;
   }
 }
