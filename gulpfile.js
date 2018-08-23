@@ -48,4 +48,4 @@ gulp.task('less', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./app/'));
 });
-gulp.task('default', ['less', 'html', 'watch', 'minify-js']);
+gulp.task('default', ['less', 'html', 'watch', 'image', 'minify-js']);
