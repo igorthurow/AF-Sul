@@ -2,476 +2,482 @@
 @medium-padding: 50px;
 @small-padding: 20px;
 .btn {
-	padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 .default-item-text {
-	font-size: 1.2rem;
-	@media screen and (min-width: 768px) {
-		font-size: 1.4rem;
-	}
+  font-size: 1.2rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .email {
-	text-align: center;
-	word-break: break-all;
-	font-size: 1.5rem;
-	@media screen and (max-width: 768px) {
-		font-size: 1.3rem;
-	}
+  text-align: center;
+  word-break: break-all;
+  font-size: 1.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 }
 
 .default-bigger-text {
-	font-size: 2.8rem;
-	@media screen and (max-width: 768px) {
-		font-size: 2.5rem;
-	}
-	@media screen and (max-width: 576px) {
-		font-size: 2rem;
-	}
+  font-size: 2.8rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 2rem;
+  }
 }
 
 .default-title {
-	font-size: 2.3rem;
-	font-weight: bold;
-	@media screen and (max-width: 768px) {
-		font-size: 1.8rem;
-	}
+  font-size: 2.1rem;
+  font-weight: bold;
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
 
 .default-medium-text {
-	font-size: 2rem;
-	@media screen and (max-width: 576px) {
-		font-size: 1.5rem;
-	}
+  font-size: 2rem;
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
+  }
 }
 
 .default-small-text {
-	@media screen and (min-width: 768px) {
-		font-size: 1.1rem;
-	}
-	font-size: 1rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+  font-size: 1rem;
 }
 
 .carousel-main-padding {
-	@media screen and (min-width: 1024px) {
-		padding-bottom: 15%;
-	}
-	@media screen and (max-width: 768px) {
-		padding-bottom: 20%;
-	}
-	@media screen and (max-width: 576px) {
-		padding-bottom: 0;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 15%;
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 20%;
+  }
+  @media screen and (max-width: 576px) {
+    padding-bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	.carousel-indicators {
-		padding-bottom: 3%;
-	}
-	.carousel-item {
-		height: 100vh;
-		min-height: 300px;
-		background: no-repeat center center scroll;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		.carousel-content-text {
-			background-color: rgba(0, 0, 0, 0.6);
-			font-size: 3rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100%;
-			flex-direction: column;
-			.carousel-content-text-wrapper {
-				margin: 50px 0;
-				@supports (-webkit-overflow-scrolling: touch) {
-					margin-top: 70px;
-				}
-				.carousel-content-text-main {
-					text-align: center;
-					text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
-					font-weight: bold;
-					color: #fff;
-					.default-bigger-text;
-				}
-				.carousel-content-text-side {
-					text-align: center;
-					text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
-					color: #fff;
-					.default-medium-text;
-				}
-			}
-			.carousel-main-btn {
-				.default-small-text;
-				border: 3px solid #f8f9fa;
-				@media screen and (min-width: 576px) {
-					position: absolute;
-					bottom: 30%;
-				}
-				a {
-					text-decoration: none;
-					color: #f8f9fa;
-					&:hover {
-						color: #212529;
-					}
-				}
-				&:hover,
-				&:active {
-					a {
-						color: #212529;
-					}
-				}
-			}
-		}
-	}
-	.is-not-mobo {
-		@media screen and (max-width: 576px) {
-			display: none;
-		}
-	}
-	.navbar {
-		background-color: #000 !important;
-		border-bottom: 4px solid @nice-yellow;
-		.navbar-brand {
-			img {
-				max-height: 100px;
-			}
-		}
-		.navbar-toggler:focus,
-		.navbar-toggler:hover {
-			outline-color: @nice-yellow;
-		}
-		.navbar-nav {
-			@media screen and (max-width: 576px) {
-				padding-top: 20px;
-			}
-			.nav-item {
-				@media screen and (min-width: 1024px) {
-					.nav-link {
-						font-size: 15px;
-						text-transform: uppercase;
-						display: flex;
-						&:not(.dropdown-toggle) {
-							&:after {
-								content: "";
-								border-right: 1px solid grey;
-								padding-left: 16px;
-							}
-						}
-						&.dropdown-toggle {
-							&:after {
-								align-self: center;
-							}
-						}
-						&.nav-link-last-child {
-							padding-left: 0;
-							&:after {
-								content: none;
-							}
-							&:before {
-								content: " ";
-								border-left: 1px solid grey;
-								padding-left: 16px;
-							}
-						}
-					}
-				}
-				.dropdown-menu {
-					@media screen and (max-width: 576px) {
-						height: 200px;
-						overflow-y: auto;
-					}
-					.dropdown-item {
-						transition: .25s;
-						letter-spacing: .4px;
-						&.active,
-						&:active,
-						&:hover {
-							color: #fff;
-							background-color: @nice-yellow;
-						}
-						&:focus {
-							outline-color: @nice-yellow;
-						}
-					}
-				}
-			}
-		}
-		&.navbar-item-page {
-			position: sticky;
-		}
-	}
-	.about-us {
-		padding: @medium-padding 0;
-		background: url("./resources/BG-saiba-mais.jpg") center center fixed;
-		.about-us-content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			h2 {
-				.default-title;
-				font-size: 2.1rem;
-				font-weight: normal;
-			}
-			.about-us-unique-title {
-				line-height: 0.5;
-				font-weight: bold;
-				.default-title;
-				@media screen and (max-width: 576px) {
-					text-align: center;
-					.default-medium-text;
-				}
-			}
-			.about-us-main-text {
-				padding: @medium-padding 0;
-				.row {
-					align-items: center;
-					.about-us-main-text-left {
-						font-weight: lighter;
-						.default-bigger-text;
-						padding-bottom: @small-padding;
-						@media screen and (min-width: 768px) {
-							line-height: 1.9;
-						}
-						p {
-							margin-bottom: 0.3rem;
-						}
-						@media screen and (min-width: 768px) {
-							text-align: right;
-							padding-bottom: 0;
-						}
-					}
-					.about-us-main-text-right {
-						font-size: 16px;
-						line-height: 1.8;
-					}
-				}
-			}
-			.about-us-btn {
-				.default-small-text;
-			}
-		}
-	}
-	.our-contacts {
-		display: flex;
-		align-items: center;
-		min-height: 250px;
-		background-color: #d99c06;
-		background: url("./resources/BG-parallax-telefone-e-mail.jpg") center center fixed;
-		.our-contacts-number {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			.our-contacts-number-prefix {
-				.default-medium-text;
-			}
-			.our-contacts-number-item {
-				@media screen and (min-width: 768px) {
-					cursor: default;
-					pointer-events: none;
-				}
-				text-decoration: none;
-				color: #000;
-				white-space: nowrap;
-				.default-bigger-text;
-				padding: 0 10px;
-				letter-spacing: -1px;
-			}
-		}
-		.our-contacts-email {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-weight: 600;
-			white-space: nowrap;
-		}
-	}
-	.our-products {
-		padding-top: @medium-padding;
-		@media screen and (min-width: 768px) {
-			padding-top: @medium-padding;
-		}
-		.our-products-content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			.genova-products {
-				.our-products-item {
-					@media screen and (min-width: 768px) {
-						padding-top: 0 !important;
-						.our-products-img-wrapper {
-							padding: 0 60px;
-						}
-					}
-				}
-			}
-			.acotelas-products {
-				.our-products-item {
-					.our-products-img-wrapper {
-						min-height: auto !important;
-					}
-				}
-			}
-			.our-products-side-title {
-				white-space: nowrap;
-				text-align: center;
-				font-size: 1.6rem;
-				line-height: 0.6;
-				font-weight: normal;
-				@media screen and (min-width: 768px) {
-					font-size: 2rem;
-					line-height: 1.2;
-				}
-			}
-			.our-products-logo {
-				margin-bottom: 20px;
-				max-width: 260px;
-			}
-			.our-products-title {
-				margin-bottom: 4%;
-				@media screen and (min-width: 768px) {
-					line-height: 0.6;
-					margin: 0;
-				}
-				text-align: center;
-				.default-title;
-			}
-			.row {
-				align-items: center;
-				justify-content: center;
-				.our-products-item {
-					padding: 10% 3%;
-					@media screen and (min-width: 768px) {
-						padding: 3% 4%;
-					}
-					.our-products-img-wrapper {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						@media screen and (min-width: 768px) {
-							min-height: 300px;
-						}
-						.our-products-image {
-							max-width: 100%;
-							max-height: 400px;
-							@media screen and (max-width: 768px) {
-								padding: 0 10%;
-							}
-						}
-					}
-				}
-				.our-products-item-title {
-					.default-item-text;
-					font-weight: 600;
-					letter-spacing: -0.5px;
-					margin-top: 10px;
-				}
-			}
-			.our-products-partners {
-				display: flex;
-				flex-wrap: wrap;
-				max-width: 100%;
-				padding-top: @medium-padding;
-				align-items: center;
-				justify-content: center;
-				@media screen and (min-width: 768px) {
-					justify-content: space-around;
-					margin: 0;
-				}
-				.our-products-image-wrapper {
-					max-width: 100px;
-					margin: 15px;
-					transition: 0.25s;
-					opacity: 0.5;
-					@media screen and (min-width: 768px) {
-						max-width: 110px;
-					}
-					&:hover {
-						opacity: 1;
-					}
-					a {
-						img {
-							padding: 10px;
-						}
-					}
-				}
-			}
-			button {
-				.default-small-text;
-				@media screen and (min-width: 768px) {
-					margin: 50px 0 10px;
-				}
-			}
-		}
-	}
+  font-family: "Open Sans", sans-serif;
+  .carousel-indicators {
+    padding-bottom: 3%;
+  }
+  .carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .carousel-content-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+      .carousel-content-text-wrapper {
+        margin: 50px 0;
+        @supports (-webkit-overflow-scrolling: touch) {
+          margin-top: 70px;
+        }
+        .carousel-content-text-main {
+          text-align: center;
+          text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
+          font-weight: bold;
+          color: #fff;
+          .default-bigger-text;
+        }
+        .carousel-content-text-side {
+          text-align: center;
+          text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 1);
+          color: #fff;
+          .default-medium-text;
+        }
+      }
+      .carousel-main-btn {
+        .default-small-text;
+        border: 3px solid #f8f9fa;
+        @media screen and (min-width: 576px) {
+          position: absolute;
+          bottom: 30%;
+        }
+        a {
+          text-decoration: none;
+          color: #f8f9fa;
+          &:hover {
+            color: #212529;
+          }
+        }
+        &:hover,
+        &:active {
+          a {
+            color: #212529;
+          }
+        }
+      }
+    }
+  }
+  .is-not-mobo {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  .navbar {
+    background-color: #000 !important;
+    border-bottom: 4px solid @nice-yellow;
+    .navbar-brand {
+      img {
+        max-height: 100px;
+      }
+    }
+    .navbar-toggler:focus,
+    .navbar-toggler:hover {
+      outline-color: @nice-yellow;
+    }
+    .navbar-nav {
+      @media screen and (max-width: 576px) {
+        padding-top: 20px;
+      }
+      .nav-item {
+        @media screen and (min-width: 1024px) {
+          .nav-link {
+            font-size: 15px;
+            text-transform: uppercase;
+            display: flex;
+            &:not(.dropdown-toggle) {
+              &:after {
+                content: "";
+                border-right: 1px solid grey;
+                padding-left: 16px;
+              }
+            }
+            &.dropdown-toggle {
+              &:after {
+                align-self: center;
+              }
+            }
+            &.nav-link-last-child {
+              padding-left: 0;
+              &:after {
+                content: none;
+              }
+              &:before {
+                content: " ";
+                border-left: 1px solid grey;
+                padding-left: 16px;
+              }
+            }
+          }
+        }
+        .dropdown-menu {
+          @media screen and (max-width: 576px) {
+            height: 200px;
+            overflow-y: auto;
+          }
+          .dropdown-item {
+            transition: .25s;
+            letter-spacing: .4px;
+            &.active,
+            &:active,
+            &:hover {
+              color: #fff;
+              background-color: @nice-yellow;
+            }
+            &:focus {
+              outline-color: @nice-yellow;
+            }
+          }
+        }
+      }
+    }
+    &.navbar-item-page {
+      position: sticky;
+    }
+  }
+  .about-us {
+    padding: @medium-padding 0;
+    background: url("./resources/BG-saiba-mais.jpg") center center fixed;
+    .about-us-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        .default-title;
+        font-size: 2.1rem;
+        font-weight: normal;
+      }
+      .about-us-unique-title {
+        line-height: 0.5;
+        font-weight: bold;
+        .default-title;
+        @media screen and (max-width: 576px) {
+          text-align: center;
+          .default-medium-text;
+        }
+      }
+      .about-us-main-text {
+        padding: @medium-padding 0;
+        .row {
+          align-items: center;
+          .about-us-main-text-left {
+            font-weight: lighter;
+            .default-bigger-text;
+            padding-bottom: @small-padding;
+            @media screen and (min-width: 768px) {
+              line-height: 1.9;
+            }
+            p {
+              margin-bottom: 0.3rem;
+            }
+            @media screen and (min-width: 768px) {
+              text-align: right;
+              padding-bottom: 0;
+            }
+          }
+          .about-us-main-text-right {
+            font-size: 16px;
+            line-height: 1.8;
+          }
+        }
+      }
+      .about-us-btn {
+        .default-small-text;
+      }
+    }
+  }
+  .our-contacts {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    background-color: #d99c06;
+    background: url("./resources/BG-parallax-telefone-e-mail.jpg") center center fixed;
+    .our-contacts-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .our-contacts-number-prefix {
+        .default-medium-text;
+      }
+      .our-contacts-number-item {
+        @media screen and (min-width: 768px) {
+          cursor: default;
+          pointer-events: none;
+        }
+        text-decoration: none;
+        color: #000;
+        white-space: nowrap;
+        .default-bigger-text;
+        padding: 0 10px;
+        letter-spacing: -1px;
+      }
+    }
+    .our-contacts-email {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+  .our-products {
+    padding-top: @medium-padding;
+    @media screen and (min-width: 768px) {
+      padding-top: @medium-padding;
+    }
+    .our-products-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .terrativa-title {
+				font-size: 1.3rem !important;
+        @media screen and (min-width: 768px) {
+          font-size: 1.8rem !important;
+        }
+      }
+      .genova-products {
+        .our-products-item {
+          @media screen and (min-width: 768px) {
+            padding-top: 0 !important;
+            .our-products-img-wrapper {
+              padding: 50px;
+            }
+          }
+        }
+      }
+      .acotelas-products {
+        .our-products-item {
+          .our-products-img-wrapper {
+            min-height: auto !important;
+          }
+        }
+      }
+      .our-products-side-title {
+        white-space: nowrap;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 0.6;
+        font-weight: normal;
+        @media screen and (min-width: 768px) {
+          font-size: 2rem;
+          line-height: 1.2;
+        }
+      }
+      .our-products-logo {
+        margin-bottom: 20px;
+        max-width: 260px;
+      }
+      .our-products-title {
+        margin-bottom: 4%;
+        @media screen and (min-width: 768px) {
+          line-height: 0.6;
+          margin: 0;
+        }
+        text-align: center;
+        .default-title;
+      }
+      .row {
+        align-items: center;
+        justify-content: center;
+        .our-products-item {
+          padding: 10% 3%;
+          @media screen and (min-width: 768px) {
+            padding: 3% 4%;
+          }
+          .our-products-img-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (min-width: 768px) {
+              min-height: 300px;
+            }
+            .our-products-image {
+              max-width: 100%;
+              max-height: 400px;
+              @media screen and (max-width: 768px) {
+                padding: 0 10%;
+              }
+            }
+          }
+        }
+        .our-products-item-title {
+          .default-item-text;
+          font-weight: 600;
+          letter-spacing: -0.5px;
+          margin-top: 10px;
+        }
+      }
+      .our-products-partners {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        padding-top: @medium-padding;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: 768px) {
+          justify-content: space-around;
+          margin: 0;
+        }
+        .our-products-image-wrapper {
+          max-width: 100px;
+          margin: 15px;
+          transition: 0.25s;
+          opacity: 0.5;
+          @media screen and (min-width: 768px) {
+            max-width: 110px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+          a {
+            img {
+              padding: 10px;
+            }
+          }
+        }
+      }
+      button {
+        .default-small-text;
+        @media screen and (min-width: 768px) {
+          margin: 50px 0 10px;
+        }
+      }
+    }
+  }
 }
 
 .contact-us {
-	margin-top: @medium-padding;
-	padding: @medium-padding 0;
-	background-color: #181818;
-	.contact-us-content {
-		color: #fff;
-		.contact-us-logo-row {
-			@media screen and (max-width: 576px) {
-				display: flex;
-				justify-content: center;
-				.contact-us-logo-image {
-					max-height: 140px;
-				}
-			}
-		}
-		.contact-us-title {
-			.default-title;
-		}
-		.row {
-			align-items: center;
-			padding-top: @medium-padding;
-			@media screen and (max-width: 576px) {
-				flex-wrap: wrap-reverse;
-			}
-			.contact-us-contacts {
-				text-align: center;
-				padding-bottom: @medium-padding;
-				@media screen and (min-width: 769px) {
-					padding-top: 0;
-					text-align: right;
-				}
-				a {
-					@media screen and (min-width: 768px) {
-						cursor: default;
-						pointer-events: none;
-					}
-					.default-bigger-text;
-					font-weight: 500;
-					text-decoration: none;
-					color: #fff;
-					display: block;
-					.contact-us-number-prefix {
-						.default-medium-text;
-					}
-				}
-				.email {
-					@media screen and (min-width: 768px) {
-						text-align: right;
-					}
-				}
-			}
-		}
-	}
+  margin-top: @medium-padding;
+  padding: @medium-padding 0;
+  background-color: #181818;
+  .contact-us-content {
+    color: #fff;
+    .contact-us-logo-row {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        justify-content: center;
+        .contact-us-logo-image {
+          max-height: 140px;
+        }
+      }
+    }
+    .contact-us-title {
+      .default-title;
+    }
+    .row {
+      align-items: center;
+      padding-top: @medium-padding;
+      @media screen and (max-width: 576px) {
+        flex-wrap: wrap-reverse;
+      }
+      .contact-us-contacts {
+        text-align: center;
+        padding-bottom: @medium-padding;
+        @media screen and (min-width: 769px) {
+          padding-top: 0;
+          text-align: right;
+        }
+        a {
+          @media screen and (min-width: 768px) {
+            cursor: default;
+            pointer-events: none;
+          }
+          .default-bigger-text;
+          font-weight: 500;
+          text-decoration: none;
+          color: #fff;
+          display: block;
+          .contact-us-number-prefix {
+            .default-medium-text;
+          }
+        }
+        .email {
+          @media screen and (min-width: 768px) {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
 }
 
 .leeboy-furlan {
-	.our-products-img-wrapper {
-		@media screen and (min-width: 768px) {
-			min-height: 400px !important;
-		}
-	}
+  .our-products-img-wrapper {
+    @media screen and (min-width: 768px) {
+      min-height: 400px !important;
+    }
+  }
 }

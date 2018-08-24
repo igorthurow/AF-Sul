@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     livereload = require ('gulp-livereload'),
     htmlmin = require('gulp-htmlmin'),
     image = require('gulp-image'),
-    minifyjs = require('gulp-js-minify');
+    minifyjs = require('gulp-js-minify'),
+    resizer = require('gulp-images-resizer');
  
 gulp.task('image', function () {
   gulp.src('./src/resources/*')
@@ -35,6 +36,14 @@ gulp.task('minify-js', function(){
     .pipe(livereload());
 });
 
+gulp.task('resize', function() {
+  return gulp.src('./src/resources/*')
+      .pipe(resizer({
+          width: 480
+      }))
+  .pipe(gulp.dest('./app/resources'));
+});
+
 gulp.task('less', function () {
   return gulp.src('./src/*.less')
     .pipe(less().on('error', function (err) {
@@ -48,4 +57,4 @@ gulp.task('less', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./app/'));
 });
-gulp.task('default', ['less', 'html', 'watch', 'image', 'minify-js']);
+gulp.task('default', ['less', 'html', 'watch', 'minify-js']);

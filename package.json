@@ -19,6 +19,7 @@
     "gulp-html": "^0.5.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-image": "^4.3.0",
+    "gulp-images-resizer": "0.0.5",
     "gulp-js-minify": "0.0.3",
     "gulp-less": "^3.5.0",
     "gulp-livereload": "^3.8.1",
