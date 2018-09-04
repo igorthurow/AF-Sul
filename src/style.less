@@ -5,6 +5,10 @@
   padding: 10px 20px;
 }
 
+a:hover {
+	text-decoration: none !important;
+}
+
 .default-item-text {
   font-size: 1.2rem;
   @media screen and (min-width: 768px) {
@@ -296,7 +300,18 @@ body {
       align-items: center;
       font-weight: 600;
       white-space: nowrap;
-    }
+		}
+		.our-contacts-adress {
+			text-align: center;
+			border-top: 1px solid rgba(255,255,255,0.6);
+			margin: @medium-padding 0px;
+			.our-contacts-adress-title {
+				.default-small-text;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				padding: @medium-padding 0 10px;
+			}
+		}
   }
   .our-products {
     padding-top: @medium-padding;
@@ -387,10 +402,12 @@ body {
           }
         }
         .our-products-item-title {
+					text-decoration: none;
+					color: #000;
           .default-item-text;
           font-weight: 600;
           letter-spacing: -0.5px;
-          margin-top: 10px;
+					margin-top: 10px;
         }
         &.pmf-row {
           img {
