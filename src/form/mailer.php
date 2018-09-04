@@ -13,11 +13,11 @@ $mail->CharSet = 'UTF-8';
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  
 try {
-     $mail->Host = 'smtp.actimpermeabilizacao.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+     $mail->Host = 'smtp.afsulmaquinas.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
      $mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
      $mail->Port       = 587; //  Usar 587 porta SMTP
-     $mail->Username = 'contato@actimpermeabilizacao.com.br'; // Usuário do servidor SMTP (endereço de email)
-     $mail->Password = 'ACT2018++'; // Senha do servidor SMTP (senha do email usado)
+     $mail->Username = 'debora@afsulmaquinas.com.br'; // Usuário do servidor SMTP (endereço de email)
+     $mail->Password = '#Dschambeck9'; // Senha do servidor SMTP (senha do email usado)
 
 
 
@@ -26,16 +26,12 @@ try {
     $nomeremetente     = $_POST['name'];
     $emailremetente    = $_POST['email'];
     $telefone           = $_POST['tel'];
-    $description          = $_POST['description'];
-    $attachment = "../attachment/" . basename ( $_FILES['attachment']['name']);
-    if (move_uploaded_file($_FILES['attachment']['tmp_name'], $attachment)) {
-        $mail->AddAttachment($attachment);
-    }
+    $msg          = $_POST['msg'];
     
 
     //Define o remetente
      // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-     $mail->SetFrom('contato@actimpermeabilizacao.com.br', $nomeremetente); //Seu e-mail
+     $mail->SetFrom('debora@afsulmaquinas.com.br', $nomeremetente); //Seu e-mail
      $mail->AddReplyTo($emailremetente, $nomeremetente); //Seu e-mail
      $mail->Subject = 'Novo contato, formulário parceiros';//Assunto do e-mail
  
@@ -54,7 +50,7 @@ try {
     Nome: $nomeremetente <br>  
     E-mail: $emailremetente    <br> 
     Telefone: $telefone  <br>          
-    Maiores detalhes: $description";
+    Mensagem: $msg";
 
  
      //Define o corpo do email
@@ -76,7 +72,7 @@ try {
 if(isset($_POST['name']) && isset($_POST['tel'])) {
     $timeD = date('d/m/Y');
     $timeH = date('H:i:s');
-    $data = $_POST['name'] . "\t" . $_POST['email'] . "\t" . $_POST['tel'] . "\t" . $_POST['description'] . $attachment . "\t $timeD \t" . "$timeH \t" . "\n";
+    $data = $_POST['name'] . "\t" . $_POST['email'] . "\t" . $_POST['tel'] . "\t" . $_POST['msg'] . $attachment . "\t $timeD \t" . "$timeH \t" . "\n";
     $filename = 'Contatos TXT/' . 'Contato' . ' ' . date('d.m.Y').".txt";
     if (!file_exists($filename)) {
         $fh = fopen($filename, 'w') or die;
