@@ -1,5 +1,8 @@
+# Updated ignories. 
 node_modules/
 .vscode/
 package-lock.json
 app/PHPMailer/
 app/form/
+src/PHPMailer/
+src/form/
